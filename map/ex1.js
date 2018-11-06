@@ -20,9 +20,14 @@ En sortie: [
 ]
 
  */
-
-function getStringsLength(strings) {
+const tableau = ['Chicken', 'Bacon', 'Tofu', 'Mayonnaise'];
+function getStringsLength(string){
+const getStringsLength = tableau.map(function(string){
+return string + " contains " + string.length + " characters";
+});
+return getStringsLength;
 }
+getStringsLength(tableau);
 
 // Si besoin, tu peux toujours visualiser le résultat avec console.log,
 // mais alors, il faut alors lancer l'exercice avec node map/ex1

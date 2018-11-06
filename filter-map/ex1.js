@@ -21,8 +21,24 @@ Sortie attendue:
 ['Yoda', 'Obiwan Kenobi', 'Mace Windu']
 
 */
+const tableau = [
+  { name: 'Yoda', side: 'light' },
+  { name: 'Count Dooku', side: 'dark' },
+  { name: 'Obiwan Kenobi', side: 'light' },
+  { name: 'Mace Windu', side: 'light' },
+  { name: 'Darth Sidious', side: 'dark' },
+  { name: 'Darth Maul', side: 'dark' }
+];
 
 function getJedisNames(characters) {
+  const getJedisNames = tableau.filter(function(characters){
+    return characters.side === "light";
+  })
+  .map(function(characters){
+    return characters.name;
+  })
+  return getJedisNames;
 }
+getJedisNames(tableau)
 
 module.exports = getJedisNames;

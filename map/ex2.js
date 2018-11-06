@@ -42,9 +42,38 @@ En sortie: [
 
  */
 
-function getFoodCategories(foods) {
-}
 
+const tableau = [
+  {
+    food: 'Bacon',
+    isVegetarian: false
+  },
+  {
+    food: 'Sausage',
+    isVegetarian: false
+  },
+  {
+    food: 'Tofu',
+    isVegetarian: true
+  },
+  {
+    food: 'Chick Pea',
+    isVegetarian: true
+  }
+];
+
+function getFoodCategories(foods){
+  const getFoodCategories = tableau.map(function(foods){
+    if(foods.isVegetarian === true){
+      return foods.food + " is suitable for vegetarians";
+    }
+    else{
+      return foods.food + " is not suitable for vegetarians";
+    }
+  })
+  return getFoodCategories
+}
+getFoodCategories(tableau)
 
 
 // Ne pas modifier l'export

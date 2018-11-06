@@ -37,9 +37,24 @@ Exemple d'entrée:
 
 
  */
+const tableau = [
+  'Mad Max: Fury Road',
+  'Interstellar',
+  'Revenge of the Nerds',
+  'Revenge of the Pink Panther',
+  'Star Wars: Episode I - The Phantom Menace',
+  'Star Wars: Episode II - Attack of the Clones',
+  'Star Wars: Episode III - Revenge of the Sith'
+];
+const search = "Revenge";
 
 function searchWordFilter(items, search) {
+  const searchWordFilter = tableau.filter(function(items){
+    return items.includes('Revenge')
+  })
+  return searchWordFilter;
 }
+searchWordFilter(tableau)
 
 // Ne pas modifier l'export
 module.exports = searchWordFilter;

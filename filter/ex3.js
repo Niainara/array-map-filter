@@ -15,7 +15,7 @@ Exemple d'entrée:
     'Sandor Clegane',
     'Arya Stark',
     'Yara Greyjoy',
-    'Sansa Stark'
+    'Sansa Stark' 
   ]
 
 Sortie attendue:
@@ -23,8 +23,20 @@ Sortie attendue:
 
  */
 
+const tableau = ['Bran Stark',
+'Cersei Lannister',
+'Sandor Clegane',
+'Arya Stark',
+'Yara Greyjoy',
+'Sansa Stark'];
+
 function keepStarks(names) {
+  const keepStarks = tableau.filter(function(names){
+    return names.endsWith("Stark");
+  })
+  return keepStarks
 }
+keepStarks(tableau)
 
 // Ne pas modifier l'export
 module.exports = keepStarks;
